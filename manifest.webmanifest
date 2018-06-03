@@ -1,9 +1,8 @@
 {
   "name": "Random Quote Machine",
-  "short_name": "rqmpavi2410",
+  "short_name": "Quotes",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
-  "orientation": "portrait",
   "start_url": "https://pavi2410.tk/Random-Quote-Machine/"
 }
