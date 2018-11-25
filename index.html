@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#2196f3">
-	<meta name="description" content="Read random quotes">
-	<title>Random Quote Machine</title>
-	<link rel="manifest" href="manifest.json">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-	<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-	 crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="style.css">
-	<script src="themes.js"></script>
-	<script src="script.js"></script>
-</head>
-
-<body onload="load()">
-	<section class="hero is-bold is-fullheight" id="theme">
-		<div class="hero-body">
-			<div class="container">
-				<h1 class="title" id="quote"></h1>
-				<h2 class="subtitle" id="author"></h2>
-				<p class="buttons is-right">
-					<a class="button is-outlined" id="next" onclick="load()">
-						<span>Next</span><span class="icon"><i class="fas fa-arrow-right"></i></span>
-					</a>
-					<a class="button is-info is-outlined" id="share" target="_blank" rel="noopener">
-						<span class="icon"><i class="fab fa-twitter"></i></span><span>Share</span>
-					</a>
-				</p>
-			</div>
-		</div>
-	</section>
-</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#2196f3">
+    <meta name="description" content="Read random quotes">
+    <title>Random Quote Machine</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="themes.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body onload="load()">
+    <section class="hero is-bold is-fullheight" id="theme">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title" id="quote"></h1>
+          <h2 class="subtitle" id="author"></h2>
+          <p class="buttons is-right">
+            <a class="button is-outlined" id="next" onclick="load()">
+              <span>Next</span>
+              <span class="icon">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+            </a>
+            <a class="button is-info is-outlined" id="share" target="_blank" rel="noopener">
+              <span class="icon">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span>Share</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
