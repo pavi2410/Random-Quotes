@@ -1,13 +1,10 @@
-var currentTheme = {}
-
+let currentTheme = {}
 
 function load() {
+  document.getElementById('next').classList.add('is-loading')
   fetch('https://talaikis.com/api/quotes/random/')
     .then(res => res.json())
-    .then(json => {
-      document.getElementById('next').classList.add('is-loading')
-      process(json)
-    })
+    .then(process)
 }
 
 function process(json) {
