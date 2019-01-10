@@ -10,7 +10,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <style>
+      #quote {
+        quotes: "\f10d" "\f10e";
+      }
+      
+      #quote::before {
+        content: open-quote;
+        font-family: "Font Awesome 5 Free";
+        margin-right: 0.2em;
+      }
+      
+      #quote::after {
+        content: close-quote;
+        font-family: "Font Awesome 5 Free";
+        margin-left: 0.2em;
+      }
+
+      #author::before {
+        content: "-";
+        margin-right: 0.1em;
+      }
+    </style>
     <script src="script.js"></script>
   </head>
   <body onload="load()">
