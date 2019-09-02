@@ -1,0 +1,54 @@
+#quote {
+    quotes: "\f10d" "\f10e";
+}
+
+#quote::before {
+    content: open-quote;
+    font-family: "Font Awesome 5 Free";
+    margin-right: 0.2em;
+}
+
+#quote::after {
+    content: close-quote;
+    font-family: "Font Awesome 5 Free";
+    margin-left: 0.2em;
+}
+
+#author::before {
+    content: "-";
+    margin-right: 0.1em;
+}
+
+/* Github corner */
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg);
+    }
+    40%,
+    80% {
+        transform: rotate(10deg);
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none;
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+}
+
+/* Bulma scroll bar fix */
+html {
+    overflow-y: auto;
+}

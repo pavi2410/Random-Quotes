@@ -1,8 +1,9 @@
 {
   "name": "Random Quote Machine",
-  "short_name": "Quotes",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
-  "display": "standalone",
-  "start_url": "https://pavi2410.tk/Random-Quote-Machine/"
+  "short_name": "RQM",
+  "description": "Read random quotes",
+  "lang": "en",
+  "start_url": "/Random-Quote-Machine/",
+  "scope": "/Random-Quote-Machine/",
+  "display": "standalone"
 }

@@ -1,61 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#2196f3">
-    <meta name="description" content="Read random quotes">
-    <title>Random Quote Machine</title>
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
-    <style>
-      #quote {
-        quotes: "\f10d" "\f10e";
-      }
-      
-      #quote::before {
-        content: open-quote;
-        font-family: "Font Awesome 5 Free";
-        margin-right: 0.2em;
-      }
-      
-      #quote::after {
-        content: close-quote;
-        font-family: "Font Awesome 5 Free";
-        margin-left: 0.2em;
-      }
 
-      #author::before {
-        content: "-";
-        margin-right: 0.1em;
-      }
-    </style>
-    <script src="script.js"></script>
-  </head>
-  <body onload="load()">
-    <section class="hero is-bold is-fullheight" id="theme">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title" id="quote"></h1>
-          <h2 class="subtitle" id="author"></h2>
-          <p class="buttons is-right">
-            <a class="button is-outlined" id="next" onclick="load()">
-              <span>Next</span>
-              <span class="icon">
-                <i class="fas fa-arrow-right"></i>
-              </span>
-            </a>
-            <a class="button is-info is-outlined" id="share" target="_blank" rel="noopener">
-              <span class="icon">
-                <i class="fab fa-twitter"></i>
-              </span>
-              <span>Share</span>
-            </a>
-          </p>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2196f3">
+  <meta name="description" content="Read random quotes">
+  <title>Random Quote Machine</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+    integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="load()">
+  <section class="hero is-bold is-fullheight" id="theme">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title" id="quote">Loading...</h1>
+        <h2 class="subtitle" id="author">@pavi2410</h2>
+        <p class="buttons is-right">
+          <a class="button is-outlined" id="next" onclick="load()">
+            <span>Next</span>
+            <span class="icon">
+              <i class="fas fa-arrow-right"></i>
+            </span>
+          </a>
+          <a class="button is-info is-outlined" id="share" target="_blank" rel="noopener">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+            <span>Share</span>
+          </a>
+        </p>
       </div>
-    </section>
-  </body>
+    </div>
+  </section>
+  <a href="https://github.com/pavi2410/Random-Quote-Machine" class="github-corner" aria-label="View source on GitHub">
+    <svg width="80" height="80" viewBox="0 0 250 250"
+      style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
+      <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+      <path
+        d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+        fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+      <path
+        d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+        fill="currentColor" class="octo-body"></path>
+    </svg>
+  </a>
+</body>
+
 </html>
