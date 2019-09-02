@@ -3,7 +3,7 @@ const themes = [
     'bgClass': 'is-primary',
     'buttonClass': 'is-light',
     'color': '#009e6c',
-    'invert': trueFF
+    'invert': true
   },
   {
     'bgClass': 'is-info',
