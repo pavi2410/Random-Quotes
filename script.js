@@ -88,7 +88,7 @@ function getTweetUrl(text, hashtags = ['quotes']) {
 }
 
 function getRandomTheme() {
-  let newtheme = themes[Math.floor(Math.random() * themes.length)]
+  let newTheme = themes[Math.floor(Math.random() * themes.length)]
   if (newTheme === currentTheme) {
     return getRandomTheme()
   }
