@@ -84,7 +84,8 @@ function updateTheme() {
 }
 
 function getTweetUrl(text, hashtags = ['quotes']) {
-  return `https://twitter.com/intent/tweet?text=${encodeURI(text)}&hashtags=${hashtags.join(',')}`
+  const textWithAttribution = text + "\n\nSent from https://pavi2410.tk/Random-Quote-Machine"
+  return `https://twitter.com/intent/tweet?text=${encodeURI(textWithAttribution)}&hashtags=${hashtags.join(',')}`
 }
 
 function getRandomTheme() {
