@@ -79,9 +79,8 @@ function updateTheme() {
   theme.classList.add(currentTheme['bgClass'])
   nextBtn.classList.add(currentTheme['buttonClass'])
   if (currentTheme['invert']) shareBtn.classList.add('is-inverted')
-  githubCorner.attributeStyleMap.set('fill', '#fff')
-  githubCorner.attributeStyleMap.set('color', currentTheme['color'])
-
+  githubCorner.style.fill = '#fff'
+  githubCorner.style.color = currentTheme['color']
 }
 
 function getTweetUrl(text, hashtags = ['quotes']) {
@@ -90,5 +89,9 @@ function getTweetUrl(text, hashtags = ['quotes']) {
 }
 
 function getRandomTheme() {
-  return themes[Math.floor(Math.random() * themes.length)]
+  let newTheme = themes[Math.floor(Math.random() * themes.length)]
+  if (newTheme === currentTheme) {
+    return getRandomTheme()
+  }
+  return newTheme
 }
