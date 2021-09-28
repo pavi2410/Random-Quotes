@@ -1,9 +1,9 @@
 {
-  "name": "Random Quote Machine",
-  "short_name": "RQM",
+  "name": "Random Quotes",
+  "short_name": "random-quotes",
   "description": "Read random quotes",
   "lang": "en",
-  "start_url": "/Random-Quote-Machine/",
-  "scope": "/Random-Quote-Machine/",
+  "start_url": "/Random-Quotes/",
+  "scope": "/Random-Quotes/",
   "display": "standalone"
 }
