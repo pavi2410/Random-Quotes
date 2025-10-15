@@ -13,33 +13,10 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
     integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body onload="load()">
-  <section class="hero is-bold is-fullheight" id="theme">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title" id="quote">Loading...</h1>
-        <h2 class="subtitle" id="author">@pavi2410</h2>
-        <p class="buttons is-right">
-          <a class="button is-outlined" id="next" onclick="load()">
-            <span>Next</span>
-            <span class="icon">
-              <i class="fas fa-arrow-right"></i>
-            </span>
-          </a>
-          <a class="button is-info is-outlined" id="share" target="_blank" rel="noopener">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
-            <span>Share</span>
-          </a>
-        </p>
-      </div>
-    </div>
-  </section>
+<body>
   <a href="https://github.com/pavi2410/Random-Quote-Machine" class="github-corner" aria-label="View source on GitHub">
     <svg width="80" height="80" viewBox="0 0 250 250"
       style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true">
@@ -52,6 +29,8 @@
         fill="currentColor" class="octo-body"></path>
     </svg>
   </a>
+  <div id="app"></div>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>
