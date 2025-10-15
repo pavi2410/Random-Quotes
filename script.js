@@ -47,13 +47,13 @@ let currentTheme = {}
 
 async function load() {
   document.getElementById('next').classList.add('is-loading')
-  let res = await fetch('https://api.quotable.io/random')
+  let res = await fetch('https://quoteslate.vercel.app/api/quotes/random')
   process(await res.json())
   updateTheme()
   document.getElementById('next').classList.remove('is-loading')
 }
 
-function process({ content: quote, author }) {
+function process({ quote, author }) {
   document.getElementById('quote').textContent = quote
   document.getElementById('author').textContent = author
   document.getElementById('share').setAttribute('href', getTweetUrl(`"${quote}" - ${author}`))
@@ -84,7 +84,7 @@ function updateTheme() {
 }
 
 function getTweetUrl(text, hashtags = ['quotes']) {
-  const textWithAttribution = text + "\n\nSent from https://pavi2410.tk/Random-Quote-Machine"
+  const textWithAttribution = text + "\n\nSent from " + window.location.toString()
   return `https://twitter.com/intent/tweet?text=${encodeURI(textWithAttribution)}&hashtags=${hashtags.join(',')}`
 }
 
