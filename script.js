@@ -1,6 +1,6 @@
-import { div, button, a } from "https://esm.sh/organic-ui@0.3.0/components"
-import { state } from "https://esm.sh/organic-ui@0.3.0/reactivity"
-import { render } from "https://esm.sh/organic-ui@0.3.0/renderer"
+import { div, button, a } from "https://esm.sh/organic-ui@0.4.0/components"
+import { state } from "https://esm.sh/organic-ui@0.4.0/reactivity"
+import { render } from "https://esm.sh/organic-ui@0.4.0/renderer"
 
 const themes = [
   {
