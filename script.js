@@ -43,7 +43,17 @@ const themes = [
   }
 ]
 
-let currentTheme = {}
+let themeIndex = 0
+function getNextTheme() {
+  const nextTheme = themes[themeIndex]
+  themeIndex = (themeIndex + 1) % themes.length
+  return nextTheme
+}
+
+function getTweetUrl(text, hashtags = ['quotes']) {
+  const textWithAttribution = text + "\n\nSent from " + window.location.toString()
+  return `https://twitter.com/intent/tweet?text=${encodeURI(textWithAttribution)}&hashtags=${hashtags.join(',')}`
+}
 
 async function load() {
   document.getElementById('next').classList.add('is-loading')
@@ -71,8 +81,7 @@ function updateTheme() {
   nextBtn.classList.remove(currentTheme['buttonClass'])
   shareBtn.classList.remove('is-inverted')
 
-  // get random theme
-  currentTheme = getRandomTheme()
+  currentTheme = getNextTheme()
 
   // add new theme classes
   themeColor.setAttribute('content', currentTheme['color'])
@@ -81,17 +90,4 @@ function updateTheme() {
   if (currentTheme['invert']) shareBtn.classList.add('is-inverted')
   githubCorner.style.fill = '#fff'
   githubCorner.style.color = currentTheme['color']
-}
-
-function getTweetUrl(text, hashtags = ['quotes']) {
-  const textWithAttribution = text + "\n\nSent from " + window.location.toString()
-  return `https://twitter.com/intent/tweet?text=${encodeURI(textWithAttribution)}&hashtags=${hashtags.join(',')}`
-}
-
-function getRandomTheme() {
-  let newTheme = themes[Math.floor(Math.random() * themes.length)]
-  if (newTheme === currentTheme) {
-    return getRandomTheme()
-  }
-  return newTheme
 }
